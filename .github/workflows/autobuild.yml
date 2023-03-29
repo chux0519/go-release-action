@@ -28,7 +28,7 @@ jobs:
       uses: managedkaos/print-env@v1.0
 
     - name: Build & Publish to Github Package
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: ${{ github.repository }}/${{ env.DOCKER_REPO_NAME }}
         username: ${{ github.actor }}
@@ -38,7 +38,7 @@ jobs:
         tags: "${{ env.IMAGE_TAG }}"
 
     - name: Build & Publish to Github Container Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: ${{ github.actor }}/${{ env.DOCKER_REPO_NAME }}
         username: ${{ github.actor }}
@@ -48,7 +48,7 @@ jobs:
         tags: "${{ env.IMAGE_TAG }}"
 
     - name: Build & Publish to DockerHub
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: ${{ github.repository }}
         username: ${{ github.actor }}
